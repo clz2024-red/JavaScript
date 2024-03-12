@@ -5,9 +5,16 @@
 <title>Insert title here</title>
 <link href="" rel="stylesheet">
 
+	<style>
+		#p2 {
+			color: #ff0000;	
+		}
+	</style>
+
 </head>
 
 <body>
+<!-- <ul style="font-size: 20px"> -->
 	<ul>
 		<li>첫번째아이템입니다.</li>
 		<li>두번째아이템입니다.</li>
@@ -18,9 +25,42 @@
 	</ul>
 	
 
+	<p id="p1" style="color: #0000ff;">안녕하세요</p>
+	<p id="p2">반갑습니다.</p>
+	
 </body>
 
 <script>
+//DOM tree 생성되었을때
+document.addEventListener("DOMContentLoaded", function(){
+
+	let ulTag = document.querySelector("ul");
+
+	ulTag.style.fontSize = "20px";
+	ulTag.style.border = "1px solid #ff0000"
+
+	ulTag.firstElementChild.style.fontFamily = "궁서";
+	ulTag.firstElementChild.style.backgroundColor = "#d6d6d6";
+	ulTag.firstElementChild.style.width="400px";
+	ulTag.firstElementChild.style.padding="10px";
+
+	ulTag.lastElementChild.style.borderWidth = "5px";
+	ulTag.lastElementChild.style.borderStyle = "dotted";
+	ulTag.lastElementChild.style.borderColor = "#ff0000";
+
+	ulTag.style.listStyleType = "none";
+
+	let p1Tag = document.querySelector("#p1");
+	console.log(p1Tag.style.color);
+
+	console.log(ulTag.style.border);
+
+	let p2Tag = document.querySelector("#p2");
+	console.log(p2Tag.style.color);
+	
+
+});
+
 
 </script>
 
